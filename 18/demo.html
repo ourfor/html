@@ -26,6 +26,11 @@
 								reset: 重置按钮,恢复默认值
 
 								单选框，复选框。
+								checked: boolean类型值，表示默认选中,全选使用js实现
+								默认有一个被选中的，且必须放在一个组里面，即name相同，单选框是相互排斥的。
+
+								#### label标签
+								文字与图片绑定
 
 
 						-->
@@ -40,9 +45,17 @@
 						<tr>
 								<th>复选框</th>
 								<td>
-										<input type="checkbox" name="play" value="play">play<br>
-										<input type="checkbox" name="movie" value="movie">movie<br>
+										<input type="checkbox" checked name="play" value="play">play<br>
+										<label for="eat"><input id="eat" type="checkbox" name="movie" value="movie">movie</label><br>
 										<input type="checkbox" name="music" value="music">music<br>
+								</td>
+						</tr>
+						<tr>
+								<th>单选框</th>
+								<td>
+										<label for="man"><input id="man" type="radio" name="sex">男</label><br>
+										<label for="woman"><input id="woman" type="radio" name="sex">女</label><br>
+										<label for="unknow"><input id="unknow" type="radio" name="sex">保密</label>
 								</td>
 						</tr>
 						<tr>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+		<head>
+				<title>HTML5练习</title>
+				<meta charset="utf-8">
+				<style>
+					footer {
+						float:right;
+					}
+					body {
+						text-align:center;
+						margin:0px;
+					}
+					video {
+						margin:30px auto;
+						height: 50%;
+						width:50%;
+					}
+					sup {
+						font-size:0.5em;
+					}
+				</style>
+		</head>
+		<body>
+				<video src="http://file.ourfor.top/youtube/Army1.mp4" controls>
+				</video>
+				<br>
+				<audio src="http://file.ourfor.top/music/%E6%9D%8E%E8%8D%A3%E6%B5%A9-%E8%80%81%E8%A1%97.mp3" controls autoplay >
+				你的浏览器不支持播放音频
+				</audio>
+				<br>
+				<mark>这是高亮的部分</mark>
+				<br>
+				<command >
+						这是什么？
+				</command>
+				<br>
+				谞<sup>TM</sup>
+				<br>
+				<progress id="timer" value="20" min="0" max="100">
+						声明东西啊？
+				</progress>
+		</body>
+		<script>
+				var obj = document.getElementById("timer");
+				setInterval(function(){
+				if(obj.value<100){
+						obj.value=obj.value+1;
+				}else{
+						obj.value=0;
+				}
+				},100);
+		</script>
+</html>

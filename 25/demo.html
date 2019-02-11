@@ -1,0 +1,77 @@
+<html>
+		<head>
+				<title>指示器</title>
+				<style>
+					/* *表示所有的html标记 */
+					/* 在一个页面中id的名字不能相同，html没问题，但是以后再js中查找id容易出错，使用id就是为了保证唯一 */
+					* {
+							font-size:23pt;
+							color:green;
+					}
+					p {
+							border:1px;
+					}
+					body {
+
+					}
+					#one {
+							/*使用#查找id*/
+							color:blue;
+					}
+					div p {
+							font-size:34pt;
+							color:red;
+					}
+					/*在.前面不写html标签，则表示所有的相同名字的类都使用*/
+					/*组合选择器*/
+					p,div,#one,.one {
+							color:black;
+					}
+					/*
+					   伪元素选择器，在css2中只有a和p两种元素有伪元素选择器
+					 */
+					a:link {
+							font-size:45pt;
+							color:yellow;
+					}
+					a:visited {
+							font-size:45pt;
+							color:yellow;
+					}
+					a:hover {
+							font-size:65pt;
+							color:yellow;
+					}
+					a:active {
+							font-size:45pt;
+							color:yellow;
+					}
+					a.one:link {
+					}
+					p:first-line {
+							font-size:34pt;
+					}
+					p:first-letter {
+							font-size:45pt;
+							color:red;
+					}
+				</style>
+		</head>
+		<body>
+				<h1>这是h1标记</h1>
+				<h3>这是h3标记</h3>
+				<a>意料之外</a>
+				<p>这是一个段落</p>
+				<p id="one">这是一个段落</p>
+				<p id="two">这是一个段落</p>
+				<p class="one">这是一类段落</p>
+				<p class="one">这是一类段落</p>
+				<p class="two">这是一类段落</p>
+				<p class="one">这是一类段落</p>
+				<p class="one">这是一类段落</p>
+				<div>
+						<p>这是关联选择器</p>
+				</div>
+				<div>这是一个div标记</div>
+		</body>
+</html>
